@@ -1,36 +1,39 @@
-package cdu.connexion3A37.entities;
+package entities;
 
 import java.util.Date;
+import java.util.List;
 
 public class Objectif {
 
     private int id ;
-    private int user_id;
     private String sexe ;
     private int age ;
     private int height ;
     private int weight ;
     private String activity_level ;
     private String choix ;
-    private Date datee;
-
-    public int getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
-    }
-
-    public Date getDatee() {
-        return datee;
-    }
-
-    public void setDatee(Date datee) {
-        this.datee = datee;
-    }
-
+    private List<SuivieObjectif> suivieObjectifs;
     private int calorie ;
+
+
+    public Objectif(int id, String sexe, int age, int height, int weight, String activity_level, String choix, int calorie) {
+        this.id = id;
+        this.sexe = sexe;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
+        this.activity_level = activity_level;
+        this.choix = choix;
+        this.calorie = calorie;
+    }
+
+
+
+
+    public Objectif() {
+
+    }
+
 
     @Override
     public String toString() {
@@ -112,7 +115,9 @@ public class Objectif {
 
 
 
-    public Objectif( int age,String sexe, int height, int weight, String activity_level, int calorie,String choix) {
+
+
+    public Objectif( String sexe, int age, int height, int weight, String activity_level, String choix, int calorie) {
 
         this.sexe = sexe;
         this.age = age;
@@ -123,17 +128,5 @@ public class Objectif {
         this.calorie = calorie;
     }
 
-    public Objectif() {
-    }
 
-    public Objectif(int id, int age,String sexe, int height, int weight, String activity_level, int calorie,String choix) {
-        this.id = id;
-        this.sexe = sexe;
-        this.age = age;
-        this.height = height;
-        this.weight = weight;
-        this.activity_level = activity_level;
-        this.choix = choix;
-        this.calorie = calorie;
-    }
 }

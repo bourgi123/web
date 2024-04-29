@@ -1,0 +1,37 @@
+/* styles.css */
+.text {
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+}
+
+.combo-box, .text-field {
+    -fx-pref-width: 250px;
+    -fx-pref-height: 26px;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #ced4da;
+    -fx-border-width: 1px;
+}
+
+.combo-box:hover, .text-field:hover {
+    -fx-background-color: #e9ecef;
+}
+
+.button {
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-pref-width: 100px;
+    -fx-pref-height: 30px;
+    -fx-background-radius: 5px;
+}
+
+.button:hover {
+    -fx-background-color: #0056b3;
+}
+
+.anchor-pane {
+    -fx-background-color: #f8f9fa;
+}

@@ -1,0 +1,50 @@
+.root {
+    -fx-font-family: "Arial";
+    -fx-background-color: #f0f0f0;
+}
+
+#tableView {
+    -fx-background-color: #ffffff;
+}
+
+.button {
+    -fx-background-color: #4CAF50; /* Green */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 4px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #45a049; /* Darker Green */
+}
+
+.vbox {
+    -fx-spacing: 10px;
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.text-field {
+    -fx-font-size: 14px;
+    -fx-pref-width: 150px;
+}
+
+.date-picker {
+    -fx-font-size: 14px;
+    -fx-pref-width: 150px;
+}
+
+.combo-box {
+    -fx-font-size: 14px;
+    -fx-pref-width: 150px;
+}
+
+.anchor-pane {
+    -fx-background-color: #ffffff;
+}

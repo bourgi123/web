@@ -2,56 +2,77 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="1218.0" style="-fx-background-color: #;" stylesheets="@StylSheets/backobj.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CrudController">
+    <children>
+        <VBox layoutX="256.0" layoutY="120.0" prefHeight="381.0" prefWidth="180.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+                <TextField fx:id="tID" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sexe" />
+                <ComboBox fx:id="tSexe" prefHeight="26.0" prefWidth="254.0" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Age" />
+                <TextField fx:id="tAge" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Height" />
+                <TextField fx:id="tHeight" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="weight" />
+                <TextField fx:id="tWeight" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="activity level" />
+                <ComboBox fx:id="tActivity_level" prefHeight="26.0" prefWidth="250.0" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="objectif" />
+                <ComboBox fx:id="tObjectif" prefHeight="26.0" prefWidth="255.0" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Calorie" />
+                <TextField fx:id="tCalorie" />
 
-<AnchorPane prefHeight="693.0" prefWidth="919.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cdu.connexion3A37.controllers.CrudController">
-   <children>
-      <VBox layoutX="14.0" layoutY="80.0" prefHeight="348.0" prefWidth="278.0">
+            </children>
+        </VBox>
+        <TableView fx:id="tableview" layoutX="476.0" layoutY="161.0" prefHeight="233.0" prefWidth="581.0">
+            <columns>
+                <TableColumn fx:id="ColID" prefWidth="62.0" text="ID" />
+                <TableColumn fx:id="ColSexe" prefWidth="93.0" text="Sexe" />
+                <TableColumn fx:id="ColAge" prefWidth="62.0" text="Age" />
+                <TableColumn fx:id="ColHeight" prefWidth="68.0" text="Height" />
+                <TableColumn fx:id="ColWeight" prefWidth="74.0" text="weight" />
+                <TableColumn fx:id="ColActivity_level" prefWidth="101.0" text="activity level" />
+                <TableColumn fx:id="ColObjectif" prefWidth="64.0" text="objectif" />
+                <TableColumn fx:id="ColCalorie" prefWidth="55.0" text="Calorie" />
+            </columns>
+        </TableView>
+        <ButtonBar layoutX="42.0" layoutY="525.0" prefHeight="40.0" prefWidth="200.0" />
+        <Label layoutX="444.0" layoutY="14.0" />
+          <Button fx:id="btnSupprimer" layoutX="337.0" layoutY="500.0" mnemonicParsing="false" onAction="#Supprimer" text="Supprimer" />
+      <AnchorPane layoutY="110.0" prefHeight="560.0" prefWidth="180.0" style="-fx-background-color: #d2ffe0;">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
-            <TextField fx:id="tID" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sexe" />
-            <TextField fx:id="tSexe" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Age" />
-            <TextField fx:id="tAge" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Height" />
-            <TextField fx:id="tHeight" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="weight" />
-            <TextField fx:id="tWeight" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="activity level" />
-            <TextField fx:id="tActivity_level" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="objectif" />
-            <TextField fx:id="tObjectif" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Calorie" />
-            <TextField fx:id="tCalorie" />
+            <Button layoutX="-1.0" mnemonicParsing="false" onAction="#objectifback" prefHeight="99.0" prefWidth="180.0" text="gestion objectif" textFill="#21a64a" />
+            <Button layoutY="93.0" mnemonicParsing="false" onAction="#suiviback" prefHeight="73.0" prefWidth="180.0" text="gestion suivi" textFill="#1abc4b" />
+            <Button layoutX="-1.0" layoutY="166.0" mnemonicParsing="false" onAction="#objectifront" prefHeight="66.0" prefWidth="180.0" text="ajouter objectif" textFill="#25ae4e" />
+            <Button layoutX="-1.0" layoutY="232.0" mnemonicParsing="false" onAction="#suivifront" prefHeight="66.0" prefWidth="180.0" text="ajouter suivi" textFill="#21a64a" />
          </children>
-      </VBox>
-      <TableView fx:id="tableview" layoutX="313.0" layoutY="80.0" prefHeight="292.0" prefWidth="599.0">
-        <columns>
-          <TableColumn fx:id="ColID" prefWidth="62.0" text="ID" />
-          <TableColumn fx:id="ColSexe" prefWidth="93.0" text="Sexe" />
-            <TableColumn fx:id="ColAge" prefWidth="62.0" text="Age" />
-            <TableColumn fx:id="ColHeight" prefWidth="68.0" text="Height" />
-            <TableColumn fx:id="ColWeight" prefWidth="74.0" text="weight" />
-            <TableColumn fx:id="ColActivity_level" prefWidth="101.0" text="activity level" />
-            <TableColumn fx:id="ColObjectif" prefWidth="64.0" text="objectif" />
-            <TableColumn fx:id="ColCalorie" prefWidth="74.0" text="Calorie" />
-        </columns>
-      </TableView>
-      <ButtonBar layoutX="42.0" layoutY="525.0" prefHeight="40.0" prefWidth="200.0">
-        <buttons>
-          <Button fx:id="btnAjout" mnemonicParsing="false" onAction="#Ajouter" text="Ajouter" />
-            <Button fx:id="btnModifier" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" onAction="#Modifier" text="Modifier" />
-            <Button fx:id="btnSupprimer" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" onAction="#Supprimer" text="Supprimer" />
-        </buttons>
-      </ButtonBar>
-      <Label layoutX="444.0" layoutY="14.0" text="CRUD" />
-   </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-758.0" prefHeight="110.0" prefWidth="1997.0" style="-fx-background-color: #77e354;" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="99.0" fitWidth="114.0" layoutX="43.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@StylSheets/logo.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="99.0" fitWidth="114.0" layoutX="788.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@StylSheets/logo.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+          <Button fx:id="btnModifier" layoutX="264.0" layoutY="500.0" mnemonicParsing="false" onAction="#Modifier" text="Modifier" />
+    </children>
 </AnchorPane>

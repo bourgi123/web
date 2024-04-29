@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="1247.0" stylesheets="@StylSheets/backobj.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CRUDSUIVI">
+   <children>
+      <TableView fx:id="tableView" layoutX="445.0" layoutY="188.0" prefHeight="166.0" prefWidth="428.0">
+        <columns>
+          <TableColumn fx:id="cID" prefWidth="42.0" text="id" />
+          <TableColumn fx:id="Cancien" prefWidth="129.0" text="ancien poids" />
+            <TableColumn fx:id="Cdate" prefWidth="126.0" text="date suivi" />
+            <TableColumn fx:id="Cnouveau" prefWidth="134.0" text="nouveau poids" />
+        </columns>
+      </TableView>
+      <Button layoutX="302.0" layoutY="381.0" mnemonicParsing="false" onAction="#Modifier" text="modifier" />
+      <Button layoutX="213.0" layoutY="381.0" mnemonicParsing="false" onAction="#Supprimer" text="supprimer" />
+      <VBox layoutX="213.0" layoutY="152.0" prefHeight="181.0" prefWidth="150.0">
+         <children>
+            <Label text="id" />
+            <TextField fx:id="idsuivi" />
+            <Label text="ancien poids" />
+            <ComboBox fx:id="weightComboBox" prefWidth="150.0" />
+            <Label text="date suivi" />
+            <DatePicker fx:id="date" />
+            <Label text="nouveau poids" />
+            <TextField fx:id="nouvPoid" />
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="105.0" prefWidth="1247.0" style="-fx-background-color: #77e354;">
+         <children>
+            <ImageView fitHeight="99.0" fitWidth="114.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@StylSheets/logo.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="99.0" prefHeight="511.0" prefWidth="150.0" style="-fx-background-color: #d2ffe0;">
+         <children>
+            <Button fx:id="objectifback" mnemonicParsing="false" onAction="#objectifback" prefHeight="99.0" prefWidth="180.0" text="gestion objectif" textFill="#21a64a" />
+            <Button layoutY="99.0" mnemonicParsing="false" onAction="#suiviback" prefHeight="73.0" prefWidth="180.0" text="gestion suivi" textFill="#1abc4b" />
+            <Button layoutY="172.0" mnemonicParsing="false" onAction="#objectifront" prefHeight="66.0" prefWidth="180.0" text="ajouter objectif" textFill="#25ae4e" />
+            <Button layoutY="238.0" mnemonicParsing="false" onAction="#suivifront" prefHeight="66.0" prefWidth="180.0" text="ajouter suivi" textFill="#21a64a" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
